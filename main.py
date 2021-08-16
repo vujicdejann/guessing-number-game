@@ -99,18 +99,18 @@ class GuessingNumber(Frame):
         exit_button.place(x = 420, y = 320)
 
 # Driver code
+if __name__ == "__main__":
+    # GUI frame configuration
+    frame = tk.Tk()
+    frame.geometry("600x400")
+    frame.resizable(width = False, height = False)
+    frame.config(bg = "#065569")
+    frame.title("Guessing Number Game")
 
-# GUI frame configuration
-frame = tk.Tk()
-frame.geometry("600x400")
-frame.resizable(width = False, height = False)
-frame.config(bg = "#065569")
-frame.title("Guessing Number Game")
-
-# Definition application
-application = GuessingNumber(frame)
-application.create_widgets()
-application.variables()
-application.game()
-application.restart()
-frame.mainloop()
+    # Definition application
+    application = GuessingNumber(frame)
+    application.create_widgets()
+    application.variables()
+    application.game()
+    application.restart()
+    frame.mainloop()
